@@ -2,6 +2,8 @@ declare module "typewriter-effect/dist/core" {
   interface TypewriterOptions {
     strings: string[];
     autoStart: boolean;
+    delay: number;
+    pauseFor: number;
     loop?: boolean;
   }
 
