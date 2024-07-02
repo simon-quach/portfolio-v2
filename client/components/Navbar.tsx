@@ -48,9 +48,9 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="fixed h-screen w-[300px] p-[50px] text-[13px] transition-all z-50">
+    <div className="fixed md:h-screen md:w-[300px] p-[50px] text-[13px] transition-all z-50">
       <div className="hidden md:block">
-        <Link href="/" className={`text-light-logo block text-[20px]`}>
+        <Link href="/" className={`text-light-logo inline-block text-[20px]`}>
           simon quach
         </Link>
         <div id="typewriter1" className="text-light-description"></div>
@@ -104,7 +104,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="md:hidden fixed top-0 left-0 w-full bg-white p-[25px]">
-        <Link href="/" className={`text-light-logo block text-[20px]`}>
+        <Link href="/" className={`text-light-logo inline-block text-[20px]`}>
           simon quach
         </Link>
         <div id="typewriter2" className="text-light-description"></div>
@@ -129,7 +129,7 @@ const Navbar = () => {
         </button>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-full bg-white p-[25px] pt-[100px]">
+        <div className="md:hidden fixed top-0 left-0 w-full h-full bg-white p-[25px] ">
           <div className="flex justify-between items-center">
             <div className="text-[20px] font-bold">Menu</div>
             <button
