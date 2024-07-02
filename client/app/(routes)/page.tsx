@@ -4,7 +4,7 @@ import HomeImage from "@/images/home-image.jpg";
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       <div className="relative">
         <Image src={HomeImage} alt="home-image" width={400} />
       </div>
