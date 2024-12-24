@@ -36,7 +36,6 @@ export default function Home() {
         <br />
 
         <div className="border-l-4 border-gray-500 pl-4">
-          {/* this hella manifestation */}
           <div className="font-bold text-2xl">amazon</div>
           <div>software development engineer intern</div>
           <div>seattle, wa</div>
