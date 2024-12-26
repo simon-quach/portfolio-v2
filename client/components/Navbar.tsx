@@ -141,27 +141,16 @@ const Navbar = () => {
             </button>
           </div>
           <div className="mt-8">
-            <Link href="/" className={`block ${linkClass("/")}`}>
-              home
-            </Link>
-            <Link
-              href="/education"
-              className={`block mt-4 ${linkClass("/education")}`}
-            >
+            <div className={`block ${linkClass("/")}`}>home</div>
+            <div className={`block mt-4 ${linkClass("/education")}`}>
               education
-            </Link>
-            <Link
-              href="/experience"
-              className={`block mt-4 ${linkClass("/experience")}`}
-            >
+            </div>
+            <div className={`block mt-4 ${linkClass("/experience")}`}>
               experience
-            </Link>
-            <Link
-              href="/projects"
-              className={`block mt-4 ${linkClass("/projects")}`}
-            >
+            </div>
+            <div className={`block mt-4 ${linkClass("/projects")}`}>
               projects
-            </Link>
+            </div>
             <div className="relative mt-4">
               <div className="cursor-pointer">creative</div>
               <div className="mt-2 ml-4">
