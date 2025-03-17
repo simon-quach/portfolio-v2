@@ -52,6 +52,7 @@ export default function Home() {
           <br />
           <div>june 2024 - present</div>
         </div>
+      </div>
 
       {/* SOCIALS */}
       <div className="mt-[4rem]">
