@@ -36,7 +36,7 @@ export default function Home() {
         <br />
 
         <div className="border-l-4 border-gray-500 pl-4">
-          <div className="font-bold text-2xl">amazon</div>
+          <div className="font-bold text-2xl">amazon web services</div>
           <div>software development engineer intern</div>
           <div>seattle, wa</div>
           <br />
@@ -52,15 +52,6 @@ export default function Home() {
           <br />
           <div>june 2024 - present</div>
         </div>
-
-        <div className="border-l-4 border-gray-500 pl-4 mt-[1rem]">
-          <div className="font-bold text-2xl">ezread</div>
-          <div>software engineer intern</div>
-          <div>remote</div>
-          <br />
-          <div>june 2023 - september 2023</div>
-        </div>
-      </div>
 
       {/* SOCIALS */}
       <div className="mt-[4rem]">
