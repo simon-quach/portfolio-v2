@@ -50,7 +50,7 @@ export default function Home() {
           <div>frontend developer intern </div>
           <div>la jolla, ca</div>
           <br />
-          <div>june 2024 - present</div>
+          <div>june 2024 - march 2025</div>
         </div>
       </div>
 
