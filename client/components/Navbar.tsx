@@ -58,7 +58,6 @@ const Navbar = () => {
         <div className="mt-[2rem] hover:text-light-description">
           <div className={`block ${linkClass("/education")}`}>education</div>
           <div className={`block ${linkClass("/experience")}`}>experience</div>
-          <div className={`block ${linkClass("/projects")}`}>projects</div>
           <div
             className="relative"
             onMouseEnter={() => setIsHovered(true)}
@@ -147,9 +146,6 @@ const Navbar = () => {
             </div>
             <div className={`block mt-4 ${linkClass("/experience")}`}>
               experience
-            </div>
-            <div className={`block mt-4 ${linkClass("/projects")}`}>
-              projects
             </div>
             <div className="relative mt-4">
               <div className="cursor-pointer">creative</div>

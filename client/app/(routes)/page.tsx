@@ -12,7 +12,7 @@ export default function Home() {
       <div className="mt-[20px] text-2xl font-bold">WELCOME!!</div>
       <div className="">
         my name is <span className="font-bold">Simon</span> and i love to build
-        things! more specifically, i love to build software.
+        things!
       </div>
 
       {/* EDUCATION */}
@@ -23,9 +23,16 @@ export default function Home() {
 
         <div className="border-l-4 border-gray-500 pl-4">
           <div className="font-bold text-2xl">uc san diego</div>
-          <div>b.s. mathematics - computer science, minor in data science</div>
+          <div>b.s. in mathematics - computer science</div>
 
           <div>graduating 2026</div>
+        </div>
+
+        <div className="border-l-4 border-gray-500 pl-4 mt-[1rem]">
+          <div className="font-bold text-2xl">orange coast college</div>
+          <div>a.s. in mathematics</div>
+
+          <div>august 2022 - may 2023</div>
         </div>
       </div>
 
@@ -36,11 +43,19 @@ export default function Home() {
         <br />
 
         <div className="border-l-4 border-gray-500 pl-4">
+          <div className="font-bold text-2xl">google</div>
+          <div>software engineer intern</div>
+          <div>seattle, wa</div>
+          <br />
+          <div>incoming summer 2026</div>
+        </div>
+
+        <div className="border-l-4 border-gray-500 pl-4 mt-[1rem]">
           <div className="font-bold text-2xl">amazon web services</div>
           <div>software development engineer intern</div>
           <div>seattle, wa</div>
           <br />
-          <div>incoming summer 2025</div>
+          <div>june 2025 - september 2025</div>
         </div>
 
         <div className="border-l-4 border-gray-500 pl-4 mt-[1rem]">
