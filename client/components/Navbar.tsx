@@ -22,8 +22,6 @@ const Navbar = () => {
     const typewriter1 = new Typewriter("#typewriter1", {
       strings: [
         "software engineer",
-        "student",
-        "music producer",
         "photographer",
         "videographer",
       ],
@@ -35,8 +33,6 @@ const Navbar = () => {
     const typewriter2 = new Typewriter("#typewriter2", {
       strings: [
         "software engineer",
-        "student",
-        "music producer",
         "photographer",
         "videographer",
       ],
