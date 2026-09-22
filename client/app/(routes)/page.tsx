@@ -47,7 +47,7 @@ export default function Home() {
           <div>software engineer intern</div>
           <div>seattle, wa</div>
           <br />
-          <div>incoming summer 2026</div>
+          <div>june 2026 - september 2026</div>
         </div>
 
         <div className="border-l-4 border-gray-500 pl-4 mt-[1rem]">
