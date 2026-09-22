@@ -1,11 +1,9 @@
-"use client";
+"use client"
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import { ref, listAll, getDownloadURL } from "firebase/storage";
 import Masonry from "react-masonry-css";
 
-import { storage } from "@/utils/firebaseConfig";
+import photos from "@/images/photography";
 
 const breakpointColumnsObj = {
   default: 3,
@@ -15,26 +13,6 @@ const breakpointColumnsObj = {
 };
 
 const Photography = () => {
-  const [imageUrls, setImageUrls] = useState<string[]>([]);
-
-  useEffect(() => {
-    const fetchImages = async () => {
-      const storageRef = ref(storage);
-      const res = await listAll(storageRef);
-
-      const urls = await Promise.all(
-        res.items.map(async (itemRef) => {
-          const url = await getDownloadURL(itemRef);
-          return url;
-        })
-      );
-
-      setImageUrls(urls);
-    };
-
-    fetchImages();
-  }, []);
-
   return (
     <div className="p-4">
       <div>the art of photography</div>
@@ -43,15 +21,13 @@ const Photography = () => {
         className="my-masonry-grid"
         columnClassName="my-masonry-grid_column"
       >
-        {imageUrls.map((url, index) => (
+        {photos.map((photo, index) => (
           <div key={index} className="m-2 relative">
             <Image
-              src={url}
-              alt={`Image ${index}`}
-              width={500}
-              height={500}
-              layout="responsive"
-              className="rounded-lg w-full"
+              src={photo}
+              alt={`Photo ${index + 1}`}
+              placeholder="blur"
+              className="rounded-lg w-full h-auto"
             />
           </div>
         ))}
