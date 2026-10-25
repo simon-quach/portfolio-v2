@@ -25,7 +25,7 @@ export default function Home() {
           <div className="font-bold text-2xl">uc san diego</div>
           <div>b.s. in mathematics - computer science</div>
 
-          <div>graduating 2026</div>
+          <div>september 2023 - june 2026</div>
         </div>
 
         <div className="border-l-4 border-gray-500 pl-4 mt-[1rem]">
@@ -43,6 +43,14 @@ export default function Home() {
         <br />
 
         <div className="border-l-4 border-gray-500 pl-4">
+          <div className="font-bold text-2xl">amazon</div>
+          <div>software development engineer</div>
+          <div>seattle, wa</div>
+          <br />
+          <div>september 2026 - present</div>
+        </div>
+
+        <div className="border-l-4 border-gray-500 pl-4 mt-[1rem]">
           <div className="font-bold text-2xl">google</div>
           <div>software engineer intern</div>
           <div>seattle, wa</div>
