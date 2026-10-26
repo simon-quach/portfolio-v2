@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import HomeImage from "@/images/home-image.jpg";
-import photos from "@/images/photography";
+import { getPhotos } from "@/utils/photos";
 import { getLatestVideos } from "@/utils/youtube";
 
 const education = [
@@ -83,7 +83,10 @@ const LinkRow = ({ links }: { links: { name: string; href: string }[] }) => (
 );
 
 export default async function Home() {
-  const [latestVideo] = await getLatestVideos();
+  const [[latestVideo], photos] = await Promise.all([
+    getLatestVideos(),
+    getPhotos(),
+  ]);
   const current = experiences[0];
 
   return (
@@ -159,13 +162,13 @@ export default async function Home() {
               <div className="mt-[20px] grid grid-cols-3 gap-2">
                 {photos.slice(0, 3).map((photo, index) => (
                   <Link
-                    key={index}
+                    key={photo.file}
                     href="/photography"
                     className="relative aspect-[4/5] overflow-hidden"
                   >
                     <Image
-                      src={photo}
-                      alt={`photo ${index + 1}`}
+                      src={photo.src}
+                      alt={photo.place ?? `photo ${index + 1}`}
                       fill
                       sizes="200px"
                       placeholder="blur"

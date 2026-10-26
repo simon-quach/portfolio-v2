@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Typewriter from "typewriter-effect/dist/core";
 
+import SidebarStatus from "@/components/SidebarStatus";
+
 const SPOTIFY_URL =
   "https://open.spotify.com/artist/3SMVcm2yTCliC2bm6hSdFr?si=s6UdlVgzQqGA51L70qckyQ";
 
@@ -95,6 +97,9 @@ const Navbar = () => {
           simon quach
         </Link>
         <div id="typewriter1" className="text-light-description"></div>
+        <div className="mt-[12px]">
+          <SidebarStatus />
+        </div>
 
         <div className="mt-[2rem] text-light-description">
           {sections.map((id) => (
@@ -144,6 +149,20 @@ const Navbar = () => {
               </div>
             )}
           </div>
+          {/* Stripped from production builds; pinned to the bottom of the
+              sidebar so the creative dropdown can't cover it */}
+          {process.env.NODE_ENV === "development" && (
+            <Link
+              href="/lab"
+              className={`absolute bottom-[50px] left-[50px] ${
+                pathname.startsWith("/lab")
+                  ? "text-light-mainText"
+                  : "hover:text-light-mainText"
+              }`}
+            >
+              lab
+            </Link>
+          )}
         </div>
       </div>
       <div className="md:hidden fixed top-0 left-0 w-full bg-white p-[25px]">
@@ -238,6 +257,14 @@ const Navbar = () => {
                 </a>
               </div>
             </div>
+            <div className="mt-8">
+              <SidebarStatus />
+            </div>
+            {process.env.NODE_ENV === "development" && (
+              <Link href="/lab" className={`block mt-4 ${linkClass("/lab")}`}>
+                lab
+              </Link>
+            )}
           </div>
         </div>
       )}

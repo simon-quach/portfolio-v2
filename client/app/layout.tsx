@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inconsolata.className} flex`}>
+      <body className={`${inconsolata.className} flex bg-white`}>
         <Navbar />
 
         <div className="md:ml-[300px] md:my-[50px] my-[100px] text-light-subText text-[14px] px-[10px] md:px-0">

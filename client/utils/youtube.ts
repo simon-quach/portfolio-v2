@@ -1,3 +1,5 @@
+import fallbackVideos from "@/data/videos";
+
 export interface Video {
   id: string;
   title: string;
@@ -47,9 +49,10 @@ export async function getLatestVideos(): Promise<Video[]> {
       }
     }
 
-    return videos;
+    return videos.length > 0 ? videos : fallbackVideos;
   } catch (error) {
+    // The feed is occasionally down on YouTube's side; use the manual list
     console.error("Error fetching YouTube RSS feed:", error);
-    return [];
+    return fallbackVideos;
   }
 }

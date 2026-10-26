@@ -1,5 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Lab (local-only prototypes)
+
+`/lab` is a playground for trying ideas before they go live. It only exists while running `npm run dev`; production builds (and Vercel) don't include it at all.
+
+- Create a prototype: add `app/lab/<name>/page.dev.tsx`. It appears automatically at [localhost:3000/lab](http://localhost:3000/lab).
+- Only files named `*.dev.tsx` are dev-only. Regular helper files in `app/lab` are fine but aren't routes.
+- When a prototype is ready, move the code into the real page or component and delete its lab folder.
+
 ## Getting Started
 
 First, run the development server:
